@@ -1,0 +1,69 @@
+{
+  "schema": "intake-submission-v1.0",
+  "description": "Standard payload for Right-First-Time intake pattern",
+  "required": ["applicant", "evidence", "metadata"],
+  "sensitiveData": true,
+  "retentionDays": 365,
+  
+  "properties": {
+    "applicant": {
+      "type": "object",
+      "required": ["nino", "dob"],
+      "properties": {
+        "nino": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}[0-9]{6}[A-D]$",
+          "description": "National Insurance Number - validated format"
+        },
+        "dob": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of birth for age-related eligibility"
+        },
+        "contact": {
+          "type": "object",
+          "properties": {
+            "email": { "type": "string", "format": "email" },
+            "phone": { "type": "string", "pattern": "^[0-9]{11}$" }
+          }
+        }
+      }
+    },
+    
+    "evidence": {
+      "type": "array",
+      "minItems": 3,
+      "description": "Mandatory evidence types - must include all three categories",
+      "items": {
+        "type": "object",
+        "properties": {
+          "documentType": {
+            "enum": ["identity", "address", "income", "medical", "residency"]
+          },
+          "fileUrl": { "type": "string", "format": "uri" },
+          "checksum": { "type": "string", "description": "SHA-256 for integrity" },
+          "uploadedAt": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "submissionChannel": {
+          "enum": ["web", "api", "assisted-digital"],
+          "description": "Channel for service analytics"
+        },
+        "urgencyFlag": {
+          "type": "boolean",
+          "default": false,
+          "description": "True for high-priority triage (e.g., safeguarding)"
+        },
+        "accessibilityNeeds": {
+          "type": "array",
+          "items": { "enum": ["screen-reader", "large-text", "interpreter"] }
+        }
+      }
+    }
+  }
+}
