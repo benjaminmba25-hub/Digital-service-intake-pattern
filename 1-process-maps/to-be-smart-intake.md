@@ -3,7 +3,11 @@
 
 ```mermaid
 graph TD
-    subgraph Target State (Right-First-Time)
+    classDef automation fill:#99ff99,stroke:#090,stroke-width:2px,color:#000
+    classDef system fill:#e1f5fe,stroke:#0277bd,stroke-width:2px,color:#000
+    classDef user fill:#fff9c4,stroke:#f57f17,stroke-width:2px,color:#000
+    
+    subgraph "Target State (Right-First-Time)"
         A[User Accesses Web Portal] --> B{Real-Time Validation}
         
         B -->|Error Found| C[Instant Feedback Warning]
@@ -19,10 +23,6 @@ graph TD
         F --> I[Decision Maker Review]
         G --> I
     end
-    
-    classDef automation fill:#99ff99,stroke:#090,stroke-width:2px,color:#000
-    classDef system fill:#e1f5fe,stroke:#0277bd,stroke-width:2px,color:#000
-    classDef user fill:#fff9c4,stroke:#f57f17,stroke-width:2px,color:#000
     
     class B,E automation
     class D system
