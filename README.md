@@ -1,15 +1,12 @@
 # Digital-service-intake-pattern
 Educational simulation: A domain-agnostic "Right-First-Time" intake pattern for public sector digital services. Demonstrates process optimisation, validation logic, and governance awareness (GDPR/WCAG) for DWP/NHS/Local Gov contexts. Junior BA portfolio seeking mentorship in Integrated Care transformation. MIT Licensed.
+
 ## ⚠️ Disclaimer & Licensing
 
-**License**: MIT License (see LICENSE file)
+**Codebase:**
+The code in this repository is licensed under the [MIT License](LICENSE).
 
-**Nature of Work**: This is an **educational simulation** created by an individual 
-Business Analyst candidate. It is **not** official government policy, code, or 
-intellectual property.
+**Design System & Content:**
+This project utilizes patterns and components from the [GOV.UK Design System](https://design-system.service.gov.uk/), which is © Crown copyright and licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
 
-- No real personal data, NHS patient records, or DWP benefit systems are included
-- All scenarios are fictionalized patterns based on publicly available GDS standards 
-  and National Audit Office reports
-- Not affiliated with NHS England, DWP, or any government body
-- Created for portfolio demonstration purposes only
+**Note**: This is an educational simulation created for portfolio demonstration only. It is **not** official government policy, code, or intellectual property.
