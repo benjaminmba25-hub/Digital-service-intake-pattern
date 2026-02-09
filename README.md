@@ -1,5 +1,5 @@
 # The 'Right-First-Time' Intake Pattern
-**Junior Business Analyst Portfolio | Public Sector Digital Optimisation**
+**Technical Business Analyst Portfolio | Public Sector Digital Optimisation**
 
 ## The Problem
 In high-volume public sector intake (DWP benefits, NHS referrals, Local Government permits), 
@@ -7,7 +7,7 @@ In high-volume public sector intake (DWP benefits, NHS referrals, Local Governme
 "swivel chair" rework for caseworkers and delays for citizens.
 
 ## The Solution
-A **Smart Intake** workflow that validates evidence *before* it reaches the decision-maker, 
+A **Smart Intake** workflow that validates evidence before it reaches the decision-maker, 
 while maintaining public sector standards (accessibility, audit, GDPR).
 
 ---
@@ -19,10 +19,58 @@ Visualising current pain points and proposed optimisation.
 
 - [AS-IS: Manual Triage Process](./1-process-maps/as-is-manual-triage.md)  
   *Current state with 30% rejection rate, postal delays, and "swivel chair" inefficiencies*
-  
+```mermaid
+graph TD
+    classDef delay fill:#f9f,stroke:#333,stroke-width:2px,color:#000
+    classDef error fill:#ff9999,stroke:#f00,stroke-width:2px,color:#000
+    
+    subgraph "Current State (High Failure Rate)"
+        A[User Fills Paper Form] -->|Postal Delay| B(Mailroom Sorts)
+        B -->|Wait: 2-3 Days| C[Admin Manual Data Entry]
+        C --> D{Data Complete?}
+        
+        D -->|No - Missing Docs| E[Return to User]
+        E -->|Wait: 5+ Days| A
+        
+        D -->|Yes| F[Manager Review Queue]
+        F -->|Wait: 7 Days| G[Decision Maker]
+        
+        G -->|Reject - Wrong Category| H[Restart Process]
+        H --> A
+    end
+    
+    class B,F delay
+    class E,H error
+```  
 - [TO-BE: Smart Intake Pattern](./1-process-maps/to-be-smart-intake.md)  
   *Target state with real-time validation, auto-triage, and API-first architecture*
-
+```mermaid
+graph TD
+    classDef automation fill:#99ff99,stroke:#090,stroke-width:2px,color:#000
+    classDef system fill:#e1f5fe,stroke:#0277bd,stroke-width:2px,color:#000
+    classDef user fill:#fff9c4,stroke:#f57f17,stroke-width:2px,color:#000
+    
+    subgraph "Target State (Right-First-Time)"
+        A[User Accesses Web Portal] --> B{Real-Time Validation}
+        
+        B -->|Error Found| C[Instant Feedback Warning]
+        C -->|Guidance Provided| A
+        
+        B -->|Valid Data| D[Submit to API]
+        D --> E{Auto-Triage Logic}
+        
+        E -->|High Priority| F[Urgent Worklist]
+        E -->|Standard| G[Standard Queue]
+        E -->|Auto-Eligible| H[Immediate Approval]
+        
+        F --> I[Decision Maker Review]
+        G --> I
+    end
+    
+    class B,E automation
+    class D system
+    class A,C user
+```
 ### 2. Requirements Engineering
 Behaviour-Driven Development specifications.
 
@@ -59,14 +107,6 @@ This pattern is domain-agnostic. Specific applications would include:
 - **Local Gov**: Planning permission pre-checks (mandatory documents)
 
 *Domain-specific policy rules would be elaborated with Subject Matter Experts during discovery.*
-
-## 👤 Current Status
-**Early-career BA** with foundational DWP ecosystem knowledge. 
-
-**Seeking**: Junior BA role at Sopra Steria (NHS Integrated Care or DWP Digital) with 
-mentorship from Senior BAs to develop domain expertise in health informatics.
-
-**Learning Plan**: NHS Continuing Healthcare framework (Q1 2026), FHIR standards (Q2 2026).
 
 ## 📄 Licence & Disclaimer
 **Licence**: [MIT License](./LICENSE) - See LICENSE file for details.
