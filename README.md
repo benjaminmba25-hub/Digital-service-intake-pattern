@@ -10,6 +10,30 @@ In high-volume public sector intake (DWP benefits, NHS referrals, Local Governme
 A **Smart Intake** workflow that validates evidence before it reaches the decision-maker, 
 while maintaining public sector standards (accessibility, audit, GDPR).
 
+## 📊 Performance Analyst Approach
+
+This portfolio demonstrates **measurement-driven service optimisation** aligned with DWP Digital's 
+Performance Analyst competency framework:
+
+### Data Analysis & Visualization
+- **SQL (BigQuery Standard SQL)**: Complex JOINs and window functions for intake funnel analysis
+- **Looker Studio/Power BI**: Executive dashboards translating raw data to service insights
+- **Google Analytics 4**: User behaviour tracking and conversion optimisation
+
+### Statistical Rigor
+- **A/B Testing**: Experimental design to validate process changes (not just assume they work)
+- **KPI Definition**: Lag measures (outcomes) vs lead measures (operational drivers)
+- **Cohort Analysis**: Tracking user segments over time to identify trends
+
+### Service Improvement Methodology
+- **Problem Identification**: 30% rejection rate identified via data (not assumption)
+- **Intervention Measurement**: Quantified impact of real-time validation on processing time
+- **Continuous Monitoring**: Automated dashboards replacing monthly Excel reports
+
+### DWP Digital Alignment
+- Evidence-based decision making (NAO value-for-money principles)
+- Accessibility metrics (WCAG 2.1 compliance tracking)
+- Cost-per-transaction reduction (Civil Service efficiency targets)
 ---
 
 ## 📂 Portfolio Artefacts (Click to View)
