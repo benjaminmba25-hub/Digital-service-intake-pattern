@@ -135,6 +135,14 @@ Demonstrating DWP Digital-style data-driven service improvement.
   *Experimental design to validate Smart Intake impact with statistical rigour*
 ---
 
+## Role Target
+**Primary**: Performance Analyst – DWP Digital (Leeds/Manchester/Sheffield)
+**Secondary**: Data Analyst – Public Sector Transformation
+
+*Note: While this portfolio includes BA artefacts (process maps, user stories), the core 
+methodology is **measurement and optimisation**. The process design elements are included 
+to demonstrate end-to-end service understanding, but my focus is data-driven performance improvement.*
+
 ## 🎯 Domain Context (Examples Only)
 This pattern is domain-agnostic. Specific applications would include:
 - **DWP**: UC claim evidence validation (bank statement format checks)
