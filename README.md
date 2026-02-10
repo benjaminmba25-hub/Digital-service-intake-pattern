@@ -98,6 +98,17 @@ Stakeholder engagement preparation.
 - [Questions for Stakeholders](./5-learning/questions-for-stakeholders.md)  
   *Top 10 discovery questions for SMEs, service users, and delivery teams (to be validated)*
 
+### 6. Performance Analysis & Measurement
+Demonstrating DWP Digital-style data-driven service improvement.
+
+- [KPI Framework & SQL Queries](./6-performance-analysis/intake_kpi_framework.md)  
+  *BigQuery SQL for Right-First-Time monitoring and cost-per-transaction analysis*
+  
+- [Dashboard Specification](./6-performance-analysis/dashboard_specification.md)  
+  *Looker Studio design for real-time service performance visibility*
+  
+- [A/B Test Methodology](./6-performance-analysis/ab_test_methodology.md)  
+  *Experimental design to validate Smart Intake impact with statistical rigour*
 ---
 
 ## 🎯 Domain Context (Examples Only)
